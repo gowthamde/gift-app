@@ -1,0 +1,7 @@
+.home {
+    background-image: url('../../assets/carousel-1.png');
+    max-height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}

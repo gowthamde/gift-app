@@ -1,0 +1,21 @@
+.child-navbar {
+    height: 50px;
+    background-color: lightpink;
+    list-style-type: none;
+}
+.route-link {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+      color: white;
+      text-decoration: none;
+  }

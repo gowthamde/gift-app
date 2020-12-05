@@ -1,0 +1,27 @@
+.view-gift {
+    width: 80%;
+    background-color: lightgoldenrodyellow;
+    height: 450px;
+    border: 1px solid lightpink;
+}
+
+.cart-btn {
+    background: #FF9F00;
+    width: 100%;
+    font-size: 16px;
+    height: 45px;
+    color: #FFF;
+    border: 1px solid #FF9F00;
+    min-width: 260px;
+    border-radius: 5px;
+}
+
+.buy-btn {
+    background-color: rgb(60,179,36);
+    width: 100%;
+    font-size: 16px;
+    height: 45px;
+    min-width: 260px;
+    border-radius: 5px;
+    color: #FFF;
+}
