@@ -1,17 +1,34 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import Login from '../Common/Login/Login';
 
-const Header = () => {
-    let dialogContent = null;
+const Header = (props) => {
 
-    const handleLoginDialog = () => {
-        dialogContent = <div>
-            <Login value={ true }/>
-            </div>
+    let menu = null;
+    console.log(localStorage.getItem('userType'))
+
+    if (localStorage.getItem('userType') !== 'appUser') {
+        menu = (
+            <ul className="navbar-nav ml-auto">
+            <li className="nav-item nav-link">
+                <Link to="/signin" className="nav-link">
+                          Login
+                          </Link>
+                </li>
+                  <li className="nav-item nav-link">
+                      <Link to="/signup" className="nav-link">
+                       Signup
+                      </Link>
+                  </li>
+                  </ul>
+        )
+    } else {
+        <ul className="navbar-nav ml-auto">
+                  <li className="nav-item nav-link">
+                      Logout
+                      </li>
+            </ul>
     }
-
     return (
         <>
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -34,19 +51,11 @@ const Header = () => {
                       </Link>
                   </li>
                 </ul>
-                <ul className="navbar-nav ml-auto">
-                <li className="nav-item nav-link" onClick={handleLoginDialog}>
-                          Login
-                </li>
-                  <li className="nav-item nav-link">
-                      Signup
-                  </li>
-                </ul>
+                {
+                    menu
+                }
             </div>
         </nav>
-        {
-            dialogContent
-        }
         </>
     )
 }
